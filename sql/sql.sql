@@ -1,0 +1,10 @@
+CREATE db IF NOT EXISTS otp;
+CREATE table IF NOT EXISTS otp.users (
+    id INT NOT NULL AUTO_INCREMENT,
+    names VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    otp_code VARCHAR(6) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
+);
