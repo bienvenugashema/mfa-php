@@ -34,7 +34,7 @@ include_once 'controls.php';
         <label for="email">Email</label><br>
         <input class="form-control" type="email" id="email" name="email"><br><br>
         <label for="phone">Phone number</label><br>
-        <input class="form-control" type="tel" id="phone"><br><br>
+        <input class="form-control" type="tel" id="phone" name="phone"><br><br>
         <!-- Hidden input to store full phone number -->
         <input type="hidden" name="phone" id="fullPhone">
         <label for="password">Password:</label><br>
