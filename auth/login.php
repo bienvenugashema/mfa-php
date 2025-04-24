@@ -31,9 +31,17 @@ include_once 'controls.php';
             <label for="password">Password:</label><br>
             <input class="form-control" type="password" id="password" name="password"><br><br>
             <button name="login" class="form-control btn text-light btn-dark" type="submit">Click to Log In</button><br><br>
-            <button name="register" class="btn btn-link text-primary" type="submit">Register</button> here</p><br><br>
+            <button name="register" class="btn btn-link text-primary register" type="submit">Register</button> here</p><br><br>
         </form>
     </div>  
     </div>  
+
+    <script>
+        const register = document.querySelector(".register");
+        register.addEventListener("click", function(event) {
+            event.preventDefault();
+            window.location.href = "register.php";
+        });
+    </script>
 </body>
 </html>

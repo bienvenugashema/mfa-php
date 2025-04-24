@@ -1,4 +1,11 @@
 <?php
+include '../config/config.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require '../vendor/autoload.php';
+
 
 function sanitizeInput($data){
     $data = trim($data);
@@ -12,7 +19,59 @@ if(isset($_POST['register'])) {
     $email = filter_var(sanitizeInput($_POST['email']), FILTER_SANITIZE_EMAIL);
     $phone = sanitizeInput($_POST['phone']);
     $password = sanitizeInput($_POST['password']);
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    $phone = preg_replace('/\D/', '', $phone);
+    $email_otp = random_int(100000, 999999);
+    $phone_otp = random_int(100000, 999999);
     
+    function insertUser($n,$em, $p, $h, $eo, $po) {
+        $mail = new PHPMailer(true);
+
+        global $conn;
+        $search = "SELECT * FROM users WHERE email = '$em' OR phone = '$p'";	
+        $result = mysqli_query($conn, $search);
+        if (mysqli_num_rows($result) > 0) {
+            echo "<script>alert('User already exists!');</script>";
+        } else {
+            $sql = "INSERT INTO waiting_users (names, email, phone, password, email_otp, phone_otp) VALUES ('$n', '$em', '$p', '$h', '$eo', '$po')";	
+            if (mysqli_query($conn, $sql)) {
+                try{
+                    $mail->isSMTP();
+                    $mail->Host = 'smtp.google.com';
+                    $mail -> Username = 'bienvenugashema@gmail.com';
+                    $mail->SMTPAuth = true;
+                    $mail->Password = 'ozeb wbyf fyzp iios';
+                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;;
+                    $mail->Port = 587;
+
+                    $mail -> setFrom('bienvenugashema@gmail.com', 'OTP Verification');
+                    $mail -> addAddress($em, $n);
+
+                    // message content
+
+                    $body = "<div><h1 style='color:blue; text-align: center;'>OTP Verification
+                    <br>
+                    <h2 style='color:green; text-align: center;'>Your OTP is: $eo</h2>
+                    <p>Notice that this ot has validity of 5 min to expire</p>   
+                    </h1></div>";	
+
+                    $mail -> isHTML(true);
+                    $mail -> Body = $body;
+                    $mail -> Subject = 'OTP Verification';
+                    $mail -> AltBody = 'This email if sent from IT Bienvenu, please verify your email';
+                    $mail -> send();
+                } catch (Exception $e) {
+                    echo "<script>alert('Error: " . $mail->ErrorInfo . "');</script>";
+                }
+            } else {
+                echo "<script>alert('Error: " . mysqli_error($conn) . "');</script>";
+            }
+        }
+    }
+    insertUser($names, $email, $phone, $hashed_password, $email_otp, $phone_otp);
+
+    header("Location: otp.php?email=$email&phone=$phone&names=$names&password=$password");
+    exit();
 }
 
 if(isset($_POST['login'])) {

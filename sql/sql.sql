@@ -1,32 +1,42 @@
-CREATE db IF NOT EXISTS otp;
-CREATE table IF NOT EXISTS otp.users (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
+
+CREATE DATABASE IF NOT EXISTS otp;
+
+
+CREATE TABLE IF NOT EXISTS otp.users (
+    id INT NOT NULL AUTO_INCREMENT,
     names VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL,
-    phone VARCHAR(20) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    phone VARCHAR(20) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
+    is_verified BOOLEAN DEFAULT FALSE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id)
 );
 
-CREATE table IF NOT EXISTS otp.waiting_users (
+
+CREATE TABLE IF NOT EXISTS otp.waiting_users (
     waiting_id INT NOT NULL AUTO_INCREMENT,
     names VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    phone VARCHAR(20) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
     email_otp VARCHAR(6) NOT NULL,
     phone_otp VARCHAR(6) NOT NULL,
+    otp_expiry TIMESTAMP,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (waiting_id)
 );
-CREATE table IF NOT EXISTS otp.otp_settings (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+
+
+CREATE TABLE IF NOT EXISTS otp.otp_settings (
+    id INT NOT NULL AUTO_INCREMENT,
     user_id INT NOT NULL,
     email_otp_enabled BOOLEAN DEFAULT TRUE,
     phone_otp_enabled BOOLEAN DEFAULT TRUE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES otp.users(id)
+    PRIMARY KEY (id),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    UNIQUE KEY unique_user (user_id)
 );
 
 

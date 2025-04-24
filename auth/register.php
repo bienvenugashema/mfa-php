@@ -52,6 +52,7 @@ include_once 'controls.php';
 
   <script>
     const phoneInput = document.querySelector("#phone");
+    const login = document.querySelector(".login");
     const iti = window.intlTelInput(phoneInput, {
       separateDialCode: true,
       initialCountry: "auto",
@@ -69,6 +70,9 @@ include_once 'controls.php';
       document.getElementById("fullPhone").value = fullPhone;
       return true; // Continue with form submission
     }
+    login.addEventListener("click", function() {
+      window.location.href = "login.php";
+    });
   </script>
 </body>
 </html>
