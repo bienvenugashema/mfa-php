@@ -2,4 +2,3 @@ vendor/
 .env
 composer.lock
 .vscode
-composer.json
