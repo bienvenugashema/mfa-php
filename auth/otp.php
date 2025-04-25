@@ -10,9 +10,19 @@ global $google2fa;
 $google2fa = new Google2FA();
 
 if(isset($_POST['verify_otp'])) {
+    // Add debug logging
+    error_log("Starting OTP verification");
+    
     $email2 = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $email_otp = sanitizeInput($_POST['email_otp']);
-    $auth_code = sanitizeInput($_POST['auth_otp']);
+    $auth_otp = sanitizeInput($_POST['auth_otp']);
+    $auth_code = sanitizeInput($_POST['auth_code']);
+
+    // Debug received values
+    error_log("Email: $email2");
+    error_log("Email OTP: $email_otp");
+    error_log("Auth OTP: $auth_otp");
+    error_log("Auth Code: $auth_code");
 
     // Check if the connection is valid
     if (!$conn) {
@@ -39,10 +49,20 @@ if(isset($_POST['verify_otp'])) {
     if($result && $result->num_rows === 1) {
         $row = $result->fetch_assoc();
         
+        // Debug database values
+        error_log("DB Email OTP: " . $row['email_otp']);
+        error_log("DB Auth Code: " . $row['auth_code']);
+        
         // Verify both OTPs
         $emailOtpValid = ($row['email_otp'] === $email_otp);
-        $authOtpValid = $google2fa->verifyKey($row['auth_code'], $auth_code, 2);
+        // Remove any spaces from the auth code
+        $auth_otp = preg_replace('/\s+/', '', $auth_otp);
+        $authOtpValid = $google2fa->verifyKey($row['auth_code'], $auth_otp);
         
+        // Debug verification results
+        error_log("Email OTP Valid: " . ($emailOtpValid ? 'true' : 'false'));
+        error_log("Auth Code Valid: " . ($authOtpValid ? 'true' : 'false'));
+
         if($emailOtpValid && $authOtpValid) {
             // Both OTPs are valid - move user to verified users table
             $insert = $conn->prepare("INSERT INTO users (names, email, phone, password, is_verified, auth_code) 
@@ -115,6 +135,14 @@ if(isset($_POST['verify_otp'])) {
             <p class="text-center"> <b class="counter">5</b> min remainig for otp to expire</p>
         </div>
         <div class=" mx-auto container mt-5 w-50 p-10 bg-secondary-subtle rounded p-1">
+            // Add this before your form for testing
+            <?php if(isset($row)): ?>
+            <div style="display: none;">
+                <p>Debug Info:</p>
+                <p>Stored Auth Code: <?php echo htmlspecialchars($row['auth_code']); ?></p>
+                <p>Email OTP: <?php echo htmlspecialchars($row['email_otp']); ?></p>
+            </div>
+            <?php endif; ?>
             <form class="form" method="POST" action="otp.php">
                 <label for="otp">Code sent to your email:</label><br>
                 <input class="form-control" type="number" id="otp1" name="email_otp"><br><br>

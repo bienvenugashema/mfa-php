@@ -1,22 +1,102 @@
 <?php
-session_start();
 include_once 'controls.php';
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+// Move the sendCodes function outside of the if statement
+function sendCodes($em, $conn) {
+    $_SESSION['email_login'] = $em;
+    $otp = random_int(100000, 999999);
+    
+    // Use prepared statement instead of direct query
+    $stmt = $conn->prepare("UPDATE users SET otp = ? WHERE email = ?");
+    if (!$stmt) {
+        die("Prepare failed: " . $conn->error);
+    }
+    
+    $stmt->bind_param("ss", $otp, $em);
+    if (!$stmt->execute()) {
+        die("Execute failed: " . $stmt->error);
+    }
+
+    try {
+        // Email configuration
+        $mail = new PHPMailer(true);
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->Username = 'bienvenugashema@gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Password = "ckgp iujo nveh yuex";
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
+        $mail->setFrom('bienvenugashema@gmail.com', 'OTP Verification');
+        $mail->addAddress($em, 'User');    
+
+        $body = "<div>
+            <h1 style='color:blue; text-align: center;'>OTP Verification</h1>
+            <h2 style='color:green; text-align: center;'>Your OTP is: $otp</h2>
+            <p>Notice that this OTP has validity of 5 min to expire</p>
+        </div>";
+
+        $mail->isHTML(true);
+        $mail->Body = $body;
+        $mail->Subject = 'OTP Verification';
+        $mail->AltBody = 'This email is sent from IT Bienvenu, please verify your email';
+        
+        return $mail->send();
+    } catch (Exception $e) {
+        error_log("Mail Error: " . $e->getMessage());
+        return false;
+    }
+}
 
 if(isset($_POST['login'])) {
     $email = sanitizeInput($_POST['username']);
     $password = sanitizeInput($_POST['password']);
 
-    $select = "SELECT * FROM users where email = ? AND password = ? AND is_verified = true";
-    $res =mysqli_query($conn, $select);
-    $row = mysqli_fetch_assoc($res);
-
-    if($row['email'] = $email && password_verify($password, $row['password'])) {
-        $_SESSION['authenticated'] = true;
-        $_SESSION['user_email'] = $email;
-        header("Location: dashboard.php");
-    } else {
-        echo "<script>alert('Invalid email or password!');</script>";
+    // Use prepared statement instead of direct query
+    $stmt = $conn->prepare("SELECT * FROM users WHERE email = ? AND is_verified = true");
+    if (!$stmt) {
+        die("Prepare failed: " . $conn->error);
     }
+
+    if (!$stmt->bind_param("s", $email)) {
+        die("Binding parameters failed: " . $stmt->error);
+    }
+
+    if (!$stmt->execute()) {
+        die("Execute failed: " . $stmt->error);
+    }
+
+    $result = $stmt->get_result();
+    
+    if($result && $result->num_rows === 1) {
+        $row = $result->fetch_assoc();
+        
+        if(password_verify($password, $row['password'])) {
+            // Reset trial counter on new login attempt
+            $resetTrials = $conn->prepare("UPDATE users SET trials = 0 WHERE email = ?");
+            $resetTrials->bind_param("s", $email);
+            $resetTrials->execute();
+            
+            // Pass $conn when calling the function
+            if(sendCodes($email, $conn)) {
+                header("Location: verfyLogin.php"); // Fixed typo in filename
+                exit();
+            } else {
+                echo "<script>alert('Failed to send verification code!');</script>";
+            }
+        } else {
+            echo "<script>alert('Invalid password!');</script>";
+        }
+    } else {
+        echo "<script>alert('User not found or not verified!');</script>";
+    }
+    
+    $stmt->close();
 }
 
 ?>

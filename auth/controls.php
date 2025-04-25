@@ -39,7 +39,7 @@ function insertUser($n, $em, $p, $h, $eo, $po, $google_code) {
         
         if ($stmt->execute()) {
             $_SESSION['email'] = $em;
-            
+            $_SESSION['code'] = $google_code;
             // Configure and send email
             $mail = new PHPMailer(true);
             $mail->isSMTP();
