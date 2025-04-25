@@ -2,6 +2,23 @@
 session_start();
 include_once 'controls.php';
 
+if(isset($_POST['login'])) {
+    $email = sanitizeInput($_POST['username']);
+    $password = sanitizeInput($_POST['password']);
+
+    $select = "SELECT * FROM users where email = ? AND password = ? AND is_verified = true";
+    $res =mysqli_query($conn, $select);
+    $row = mysqli_fetch_assoc($res);
+
+    if($row['email'] = $email && password_verify($password, $row['password'])) {
+        $_SESSION['authenticated'] = true;
+        $_SESSION['user_email'] = $email;
+        header("Location: dashboard.php");
+    } else {
+        echo "<script>alert('Invalid email or password!');</script>";
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

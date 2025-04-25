@@ -1,4 +1,5 @@
 <?php
+
 require_once __DIR__ . '/../vendor/autoload.php';
 require '../vendor/autoload.php';
 require_once 'controls.php';
@@ -8,38 +9,70 @@ use Endroid\QrCode\Writer\PngWriter;
 global $google2fa;
 $google2fa = new Google2FA();
 
-
 if(isset($_POST['verify_otp'])) {
-
-    $email2 = $_POST['email'];
+    $email2 = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $email_otp = sanitizeInput($_POST['email_otp']);
     $auth_code = sanitizeInput($_POST['auth_otp']);
-    // Use prepared statement to prevent SQL injection
+
+    // Check if the connection is valid
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    // Prepare statement with error checking
     $stmt = $conn->prepare("SELECT * FROM waiting_users WHERE email = ?");
-    $stmt->bind_param("s", $email2);
-    $stmt->execute();
+    if (!$stmt) {
+        die("Prepare failed: " . $conn->error);
+    }
+
+    // Bind and execute with error checking
+    if (!$stmt->bind_param("s", $email2)) {
+        die("Binding parameters failed: " . $stmt->error);
+    }
+
+    if (!$stmt->execute()) {
+        die("Execute failed: " . $stmt->error);
+    }
+
     $result = $stmt->get_result();
     
-    if($result->num_rows === 1) {
+    if($result && $result->num_rows === 1) {
         $row = $result->fetch_assoc();
         
         // Verify both OTPs
         $emailOtpValid = ($row['email_otp'] === $email_otp);
-        $authOtpValid = $google2fa->verifyKey($row['auth_code'], $auth_code, 2); // 2*30sec tolerance
+        $authOtpValid = $google2fa->verifyKey($row['auth_code'], $auth_code, 2);
         
         if($emailOtpValid && $authOtpValid) {
             // Both OTPs are valid - move user to verified users table
-            $insert = $conn->prepare("INSERT INTO users (names, email, phone, password, is_verified) 
-                                    VALUES (?, ?, ?, ?, true)");
-            $insert->bind_param("ssss", $row['names'], $row['email'], $row['phone'], $row['password']);
-            $insert->execute();
+            $insert = $conn->prepare("INSERT INTO users (names, email, phone, password, is_verified, auth_code) 
+                                    VALUES (?, ?, ?, ?, true, ?)");
+            if (!$insert) {
+                die("Prepare insert failed: " . $conn->error);
+            }
+
+            if (!$insert->bind_param("sssss", $row['names'], $row['email'], $row['phone'], $row['password'], $row['auth_code'])) {
+                die("Binding insert parameters failed: " . $insert->error);
+            }
+
+            if (!$insert->execute()) {
+                die("Insert execute failed: " . $insert->error);
+            }
             
             // Remove from waiting list
             $delete = $conn->prepare("DELETE FROM waiting_users WHERE email = ?");
-            $delete->bind_param("s", $email);
-            $delete->execute();
+            if (!$delete) {
+                die("Prepare delete failed: " . $conn->error);
+            }
+
+            if (!$delete->bind_param("s", $email2)) {
+                die("Binding delete parameters failed: " . $delete->error);
+            }
+
+            if (!$delete->execute()) {
+                die("Delete execute failed: " . $delete->error);
+            }
             
-            // Set session variables
             $_SESSION['authenticated'] = true;
             $_SESSION['user_email'] = $email2;
             
@@ -47,7 +80,6 @@ if(isset($_POST['verify_otp'])) {
             alert('Verification successful!');
             window.location.href = 'dashboard.php';
             </script>";
-            
         } 
         elseif(!$emailOtpValid) {
             echo "<script>alert('Invalid Email OTP!');</script>";
@@ -63,11 +95,7 @@ if(isset($_POST['verify_otp'])) {
     $stmt->close();
     if(isset($insert)) $insert->close();
     if(isset($delete)) $delete->close();
-
 }
-
-
-
 ?>
 
 <html>
@@ -137,6 +165,7 @@ if(isset($_POST['verify_otp'])) {
                 </div><br><br>
                 <label for="otp">Code from your authenticator</label><br>
                 <input type="hidden" name="email" value="<?php echo htmlspecialchars($_SESSION['email']); ?>">
+                <input type="hidden" name="auth_code" value="<?php echo htmlspecialchars($row['auth_code']); ?>">
                 <input class="form-control" type="number" id="otp1" name="auth_otp"><br><br>
                 <button name="verify_otp" class="form-control btn text-light btn-dark" type="submit">Verify OTP</button><br><br>
                 <p>If you didn't receive the OTP? <i class="resend-otp text-primary cursor-pointer">Resend OTP</i></p><br><br>
