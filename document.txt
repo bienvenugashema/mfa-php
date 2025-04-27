@@ -1,0 +1,7 @@
+for accesing api
+
+localhost/mfa-php/api ==> [register, login, verify]
+
+for localhost/mfa-php/api/register ==> {names, email, phone, password}
+for localhost/mfa-php/api/login ==> {email, password}
+for ;ocalhost/mfa-php/api/verify ==> {email, email_code, auth_code}
