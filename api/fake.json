@@ -1,0 +1,33 @@
+
+[
+    {
+        "url": "/mfa-php/api/register",
+        "method": "POST",
+        "headers": { "Content-Type": "application/json" },
+        "body": {
+            "names": "John Doe",
+            "email": "john@example.com",
+            "phone": "1234567890",
+            "password": "password123"
+        }
+    },
+    {
+        "url": "/mfa-php/api/login",
+        "method": "POST",
+        "headers": { "Content-Type": "application/json" },
+        "body": {
+            "email": "john@example.com",
+            "password": "password123"
+        }
+    },
+    {
+        "url": "/mfa-php/api/verify",
+        "method": "POST",
+        "headers": { "Content-Type": "application/json" },
+        "body": {
+            "email": "john@example.com",
+            "email_otp": "123456",
+            "auth_code": "654321"
+        }
+    }
+]

@@ -1,0 +1,54 @@
+[27-Apr-2025 19:13:47 Europe/Berlin] Request path: /mfa-php/api/
+[27-Apr-2025 19:13:47 Europe/Berlin] Endpoint requested: 
+[27-Apr-2025 19:13:59 Europe/Berlin] Request path: /mfa-php/api/
+[27-Apr-2025 19:13:59 Europe/Berlin] Endpoint requested: 
+[27-Apr-2025 19:15:06 Europe/Berlin] Request path: /mfa-php/api/
+[27-Apr-2025 19:15:06 Europe/Berlin] Endpoint requested: 
+[27-Apr-2025 19:15:54 Europe/Berlin] Request path: /mfa-php/api/
+[27-Apr-2025 19:15:54 Europe/Berlin] Endpoint requested: 
+[27-Apr-2025 19:18:26 Europe/Berlin] Endpoint requested: 
+[27-Apr-2025 19:18:26 Europe/Berlin] Endpoint requested: 
+[27-Apr-2025 19:18:32 Europe/Berlin] Endpoint requested: register
+[27-Apr-2025 19:18:32 Europe/Berlin] Endpoint requested: 
+[27-Apr-2025 19:18:53 Europe/Berlin] Endpoint requested: register
+[27-Apr-2025 19:18:53 Europe/Berlin] Endpoint requested: 
+[27-Apr-2025 19:19:00 Europe/Berlin] Endpoint requested: register
+[27-Apr-2025 19:19:00 Europe/Berlin] Endpoint requested: 
+[27-Apr-2025 19:19:40 Europe/Berlin] Endpoint requested: register
+[27-Apr-2025 19:19:40 Europe/Berlin] Endpoint requested: 
+[27-Apr-2025 19:19:41 Europe/Berlin] Endpoint requested: register
+[27-Apr-2025 19:19:41 Europe/Berlin] Endpoint requested: 
+[27-Apr-2025 19:20:11 Europe/Berlin] Endpoint requested: login
+[27-Apr-2025 19:20:11 Europe/Berlin] Endpoint requested: 
+[27-Apr-2025 19:20:22 Europe/Berlin] Endpoint requested: register
+[27-Apr-2025 19:20:22 Europe/Berlin] Endpoint requested: 
+[27-Apr-2025 19:22:37 Europe/Berlin] Request received - Method: POST, Path: register
+[27-Apr-2025 19:22:37 Europe/Berlin] Endpoint: register
+[27-Apr-2025 19:22:37 Europe/Berlin] PHP Parse error:  syntax error, unexpected variable "$phone" in C:\xampp\htdocs\mfa-php\api\endpoints\register.php on line 28
+[27-Apr-2025 19:22:46 Europe/Berlin] Request received - Method: GET, Path: register
+[27-Apr-2025 19:22:46 Europe/Berlin] Endpoint: register
+[27-Apr-2025 19:22:46 Europe/Berlin] PHP Parse error:  syntax error, unexpected variable "$phone" in C:\xampp\htdocs\mfa-php\api\endpoints\register.php on line 28
+[27-Apr-2025 19:25:41 Europe/Berlin] Request received - Method: POST, Path: register
+[27-Apr-2025 19:25:41 Europe/Berlin] Endpoint: register
+[27-Apr-2025 19:25:41 Europe/Berlin] Processing registration request
+[27-Apr-2025 19:27:39 Europe/Berlin] Request received - Method: POST, Path: register
+[27-Apr-2025 19:27:39 Europe/Berlin] Endpoint: register
+[27-Apr-2025 19:27:39 Europe/Berlin] Processing registration request
+[27-Apr-2025 19:28:01 Europe/Berlin] Request received - Method: GET, Path: register
+[27-Apr-2025 19:28:01 Europe/Berlin] Endpoint: register
+[27-Apr-2025 19:28:01 Europe/Berlin] Processing registration request
+[27-Apr-2025 19:28:22 Europe/Berlin] Request received - Method: POST, Path: register
+[27-Apr-2025 19:28:22 Europe/Berlin] Endpoint: register
+[27-Apr-2025 19:28:22 Europe/Berlin] Processing registration request
+[27-Apr-2025 19:29:59 Europe/Berlin] Request received - Method: POST, Path: register
+[27-Apr-2025 19:29:59 Europe/Berlin] Endpoint: register
+[27-Apr-2025 19:29:59 Europe/Berlin] Processing registration request
+[27-Apr-2025 19:29:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function sanitizeInput() in C:\xampp\htdocs\mfa-php\api\endpoints\register.php:33
+Stack trace:
+#0 C:\xampp\htdocs\mfa-php\api\index.php(33): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\mfa-php\api\endpoints\register.php on line 33
+[27-Apr-2025 19:32:54 Europe/Berlin] Request received - Method: POST, Path: register
+[27-Apr-2025 19:32:54 Europe/Berlin] Endpoint: register
+[27-Apr-2025 19:32:54 Europe/Berlin] Processing registration request
+[27-Apr-2025 19:32:54 Europe/Berlin] Attempting registration for email: email@gmail.com

@@ -34,6 +34,10 @@ class ComposerStaticInit2185d2f99bcd56787481d9357a5972d3
         array (
             'GrahamCampbell\\ResultType\\' => 26,
         ),
+        'F' => 
+        array (
+            'Firebase\\JWT\\' => 13,
+        ),
         'E' => 
         array (
             'Endroid\\QrCode\\' => 15,
@@ -85,6 +89,10 @@ class ComposerStaticInit2185d2f99bcd56787481d9357a5972d3
         'GrahamCampbell\\ResultType\\' => 
         array (
             0 => __DIR__ . '/..' . '/graham-campbell/result-type/src',
+        ),
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
         ),
         'Endroid\\QrCode\\' => 
         array (
