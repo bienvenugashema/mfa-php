@@ -52,3 +52,213 @@ Stack trace:
 [27-Apr-2025 19:32:54 Europe/Berlin] Endpoint: register
 [27-Apr-2025 19:32:54 Europe/Berlin] Processing registration request
 [27-Apr-2025 19:32:54 Europe/Berlin] Attempting registration for email: email@gmail.com
+[27-Apr-2025 19:36:43 Europe/Berlin] Request received - Method: POST, Path: login
+[27-Apr-2025 19:36:43 Europe/Berlin] Endpoint: login
+[27-Apr-2025 19:37:48 Europe/Berlin] Request received - Method: POST, Path: login
+[27-Apr-2025 19:37:48 Europe/Berlin] Endpoint: login
+[27-Apr-2025 19:37:48 Europe/Berlin] Processing login request
+[27-Apr-2025 19:37:48 Europe/Berlin] Raw input: {
+    "email": "test@example.com",
+    "password": "password123"
+}
+[27-Apr-2025 19:37:48 Europe/Berlin] Decoded data: Array
+(
+    [email] => test@example.com
+    [password] => password123
+)
+
+[27-Apr-2025 19:37:48 Europe/Berlin] Attempting login for email: test@example.com
+[27-Apr-2025 19:39:40 Europe/Berlin] Request received - Method: POST, Path: login
+[27-Apr-2025 19:39:40 Europe/Berlin] Endpoint: login
+[27-Apr-2025 19:39:40 Europe/Berlin] Processing login request
+[27-Apr-2025 19:39:40 Europe/Berlin] Raw input: {
+    "email": "bienvenugashema@gmail.com",
+    "password": "password123"
+}
+[27-Apr-2025 19:39:40 Europe/Berlin] Decoded data: Array
+(
+    [email] => bienvenugashema@gmail.com
+    [password] => password123
+)
+
+[27-Apr-2025 19:39:40 Europe/Berlin] Attempting login for email: bienvenugashema@gmail.com
+[27-Apr-2025 19:39:50 Europe/Berlin] Request received - Method: POST, Path: login
+[27-Apr-2025 19:39:50 Europe/Berlin] Endpoint: login
+[27-Apr-2025 19:39:50 Europe/Berlin] Processing login request
+[27-Apr-2025 19:39:50 Europe/Berlin] Raw input: {
+    "email": "bienvenugashema@gmail.com",
+    "password": "123"
+}
+[27-Apr-2025 19:39:50 Europe/Berlin] Decoded data: Array
+(
+    [email] => bienvenugashema@gmail.com
+    [password] => 123
+)
+
+[27-Apr-2025 19:39:50 Europe/Berlin] Attempting login for email: bienvenugashema@gmail.com
+[27-Apr-2025 19:46:27 Europe/Berlin] Request received - Method: POST, Path: login
+[27-Apr-2025 19:46:27 Europe/Berlin] Endpoint: login
+[27-Apr-2025 19:46:27 Europe/Berlin] Processing login request
+[27-Apr-2025 19:46:27 Europe/Berlin] Raw input: {
+    "email": "bienvenugashema@gmail.com",
+    "password": "123"
+}
+[27-Apr-2025 19:46:27 Europe/Berlin] Decoded data: Array
+(
+    [email] => bienvenugashema@gmail.com
+    [password] => 123
+)
+
+[27-Apr-2025 19:46:27 Europe/Berlin] Attempting login for email: bienvenugashema@gmail.com
+[27-Apr-2025 19:46:27 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "PHPMailer" not found in C:\xampp\htdocs\mfa-php\api\endpoints\login.php:61
+Stack trace:
+#0 C:\xampp\htdocs\mfa-php\api\endpoints\login.php(84): sendOtpEmail('bienvenugashema...', 265466)
+#1 C:\xampp\htdocs\mfa-php\api\index.php(36): require_once('C:\\xampp\\htdocs...')
+#2 {main}
+  thrown in C:\xampp\htdocs\mfa-php\api\endpoints\login.php on line 61
+[27-Apr-2025 19:46:58 Europe/Berlin] Request received - Method: POST, Path: login
+[27-Apr-2025 19:46:58 Europe/Berlin] Endpoint: login
+[27-Apr-2025 19:46:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "PHPMailer" not found in C:\xampp\htdocs\mfa-php\api\endpoints\login.php:5
+Stack trace:
+#0 C:\xampp\htdocs\mfa-php\api\index.php(36): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\mfa-php\api\endpoints\login.php on line 5
+[27-Apr-2025 19:47:28 Europe/Berlin] Request received - Method: POST, Path: login
+[27-Apr-2025 19:47:28 Europe/Berlin] Endpoint: login
+[27-Apr-2025 19:47:28 Europe/Berlin] Processing login request
+[27-Apr-2025 19:47:28 Europe/Berlin] Raw input: {
+    "email": "bienvenugashema@gmail.com",
+    "password": "123"
+}
+[27-Apr-2025 19:47:28 Europe/Berlin] Decoded data: Array
+(
+    [email] => bienvenugashema@gmail.com
+    [password] => 123
+)
+
+[27-Apr-2025 19:47:28 Europe/Berlin] Attempting login for email: bienvenugashema@gmail.com
+[27-Apr-2025 19:47:28 Europe/Berlin] PHP Warning:  Undefined variable $mail in C:\xampp\htdocs\mfa-php\api\endpoints\login.php on line 69
+[27-Apr-2025 19:47:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function isSMTP() on null in C:\xampp\htdocs\mfa-php\api\endpoints\login.php:69
+Stack trace:
+#0 C:\xampp\htdocs\mfa-php\api\endpoints\login.php(89): sendOtpEmail('bienvenugashema...', 847845)
+#1 C:\xampp\htdocs\mfa-php\api\index.php(36): require_once('C:\\xampp\\htdocs...')
+#2 {main}
+  thrown in C:\xampp\htdocs\mfa-php\api\endpoints\login.php on line 69
+[27-Apr-2025 19:48:11 Europe/Berlin] Request received - Method: POST, Path: login
+[27-Apr-2025 19:48:11 Europe/Berlin] Endpoint: login
+[27-Apr-2025 19:48:11 Europe/Berlin] Processing login request
+[27-Apr-2025 19:48:11 Europe/Berlin] Raw input: {
+    "email": "bienvenugashema@gmail.com",
+    "password": "123"
+}
+[27-Apr-2025 19:48:11 Europe/Berlin] Decoded data: Array
+(
+    [email] => bienvenugashema@gmail.com
+    [password] => 123
+)
+
+[27-Apr-2025 19:48:11 Europe/Berlin] Attempting login for email: bienvenugashema@gmail.com
+[27-Apr-2025 19:53:48 Europe/Berlin] Request received - Method: GET, Path: register
+[27-Apr-2025 19:53:48 Europe/Berlin] Endpoint: register
+[27-Apr-2025 19:53:48 Europe/Berlin] Processing registration request
+[27-Apr-2025 19:59:41 Europe/Berlin] Request received - Method: POST, Path: verify
+[27-Apr-2025 19:59:41 Europe/Berlin] Endpoint: verify
+[27-Apr-2025 19:59:41 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\mfa-php\api\endpoints\verify.php on line 21
+[27-Apr-2025 19:59:41 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function sanitizeInput() in C:\xampp\htdocs\mfa-php\api\endpoints\verify.php:22
+Stack trace:
+#0 C:\xampp\htdocs\mfa-php\api\index.php(39): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\mfa-php\api\endpoints\verify.php on line 22
+[27-Apr-2025 19:59:59 Europe/Berlin] Request received - Method: POST, Path: verify
+[27-Apr-2025 19:59:59 Europe/Berlin] Endpoint: verify
+[27-Apr-2025 19:59:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function sanitizeInput() in C:\xampp\htdocs\mfa-php\api\endpoints\verify.php:22
+Stack trace:
+#0 C:\xampp\htdocs\mfa-php\api\index.php(39): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\mfa-php\api\endpoints\verify.php on line 22
+[27-Apr-2025 20:00:41 Europe/Berlin] Request received - Method: POST, Path: verify
+[27-Apr-2025 20:00:41 Europe/Berlin] Endpoint: verify
+[27-Apr-2025 20:01:08 Europe/Berlin] Request received - Method: POST, Path: verify
+[27-Apr-2025 20:01:08 Europe/Berlin] Endpoint: verify
+[27-Apr-2025 20:01:09 Europe/Berlin] Request received - Method: POST, Path: verify
+[27-Apr-2025 20:01:09 Europe/Berlin] Endpoint: verify
+[27-Apr-2025 20:03:29 Europe/Berlin] Request received - Method: POST, Path: verify
+[27-Apr-2025 20:03:29 Europe/Berlin] Endpoint: verify
+[27-Apr-2025 20:03:29 Europe/Berlin] PHP Warning:  Undefined array key "auth_code" in C:\xampp\htdocs\mfa-php\api\endpoints\verify.php on line 30
+[27-Apr-2025 20:03:43 Europe/Berlin] Request received - Method: POST, Path: verify
+[27-Apr-2025 20:03:43 Europe/Berlin] Endpoint: verify
+[27-Apr-2025 20:03:57 Europe/Berlin] Request received - Method: POST, Path: verify
+[27-Apr-2025 20:03:57 Europe/Berlin] Endpoint: verify
+[27-Apr-2025 20:03:57 Europe/Berlin] Starting verification process
+[27-Apr-2025 20:03:57 Europe/Berlin] Raw input: {
+    "email": "test@example.com",
+    "email_otp": "000000",
+    "auth_code": "000000"
+}
+[27-Apr-2025 20:03:57 Europe/Berlin] Decoded data: Array
+(
+    [email] => test@example.com
+    [email_otp] => 000000
+    [auth_code] => 000000
+)
+
+[27-Apr-2025 20:03:57 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function sanitizeInput() in C:\xampp\htdocs\mfa-php\api\endpoints\verify.php:45
+Stack trace:
+#0 C:\xampp\htdocs\mfa-php\api\index.php(39): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\mfa-php\api\endpoints\verify.php on line 45
+[27-Apr-2025 20:04:33 Europe/Berlin] Request received - Method: POST, Path: verify
+[27-Apr-2025 20:04:33 Europe/Berlin] Endpoint: verify
+[27-Apr-2025 20:04:33 Europe/Berlin] Starting verification process
+[27-Apr-2025 20:04:33 Europe/Berlin] Raw input: {
+    "email": "test@example.com",
+    "email_otp": "000000",
+    "auth_code": "000000"
+}
+[27-Apr-2025 20:04:33 Europe/Berlin] Decoded data: Array
+(
+    [email] => test@example.com
+    [email_otp] => 000000
+    [auth_code] => 000000
+)
+
+[27-Apr-2025 20:04:33 Europe/Berlin] Verifying - Email: test@example.com, OTP: 000000, Auth Code: 000000
+[27-Apr-2025 20:04:33 Europe/Berlin] User not found: test@example.com
+[27-Apr-2025 20:04:51 Europe/Berlin] Request received - Method: POST, Path: verify
+[27-Apr-2025 20:04:51 Europe/Berlin] Endpoint: verify
+[27-Apr-2025 20:04:51 Europe/Berlin] Starting verification process
+[27-Apr-2025 20:04:51 Europe/Berlin] Raw input: {
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "000000",
+    "auth_code": "000000"
+}
+[27-Apr-2025 20:04:51 Europe/Berlin] Decoded data: Array
+(
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 000000
+    [auth_code] => 000000
+)
+
+[27-Apr-2025 20:04:51 Europe/Berlin] Verifying - Email: bienvenugashema@gmail.com, OTP: 000000, Auth Code: 000000
+[27-Apr-2025 20:04:51 Europe/Berlin] Stored values - OTP: 710261, Auth Code: C4W5KIARBLEU6RIC
+[27-Apr-2025 20:04:51 Europe/Berlin] 2FA Verification result: false
+[27-Apr-2025 20:04:51 Europe/Berlin] Verification failed - OTP match: false
+[27-Apr-2025 20:06:14 Europe/Berlin] Request received - Method: POST, Path: verify
+[27-Apr-2025 20:06:14 Europe/Berlin] Endpoint: verify
+[27-Apr-2025 20:06:14 Europe/Berlin] Starting verification process
+[27-Apr-2025 20:06:14 Europe/Berlin] Raw input: {
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "710261",
+    "auth_code": "410144"
+}
+[27-Apr-2025 20:06:14 Europe/Berlin] Decoded data: Array
+(
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 710261
+    [auth_code] => 410144
+)
+
+[27-Apr-2025 20:06:14 Europe/Berlin] Verifying - Email: bienvenugashema@gmail.com, OTP: 710261, Auth Code: 410144
+[27-Apr-2025 20:06:14 Europe/Berlin] Stored values - OTP: 710261, Auth Code: C4W5KIARBLEU6RIC
+[27-Apr-2025 20:06:14 Europe/Berlin] 2FA Verification result: true
+[27-Apr-2025 20:06:14 Europe/Berlin] Verification successful for: bienvenugashema@gmail.com

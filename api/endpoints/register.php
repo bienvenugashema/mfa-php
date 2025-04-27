@@ -13,6 +13,14 @@ error_log("Processing registration request");
 
 $google2fa = new Google2FA();
 
+function sanitizeInput($data){
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+
 if ($method !== 'POST') {
     http_response_code(405);
     echo json_encode(['error' => 'Method not allowed']);
@@ -30,7 +38,7 @@ if (!$data) {
 
 try {
     // Sanitize and validate inputs
-    $names = $data['names'] ?? '';
+    $names = sanitizeInput($data['names'] ?? '');
     $email = filter_var($data['email'] ?? '', FILTER_SANITIZE_EMAIL);
     $phone = preg_replace('/\D/', '', $data['phone'] ?? '');
     $password = $data['password'] ?? '';
