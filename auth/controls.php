@@ -4,6 +4,9 @@ include '../config/config.php';
 require_once __DIR__ . '/../vendor/autoload.php';
 require '../vendor/autoload.php';
 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -11,6 +14,21 @@ use PragmaRX\Google2FA\Google2FA;
 
 $google2fa = new Google2FA();
 
+// Add authentication check function
+function checkAuth() {
+    if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
+        header("Location: /mfa-php/auth/login");
+        exit();
+    }
+}
+
+// Add guest check function
+function checkGuest() {
+    if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] === true) {
+        header("Location: /mfa-php/auth/dashboard");
+        exit();
+    }
+}
 
 function sanitizeInput($data){
     $data = trim($data);
@@ -46,7 +64,7 @@ function insertUser($n, $em, $p, $h, $eo, $po, $google_code) {
             $mail->Host = 'smtp.gmail.com';
             $mail->Username = 'bienvenugashema@gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Password = "ckgp iujo nveh yue";
+            $mail->Password = "ckgp iujo nveh yuex";
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
             $mail->setFrom('bienvenugashema@gmail.com', 'OTP Verification');
@@ -79,6 +97,7 @@ function insertUser($n, $em, $p, $h, $eo, $po, $google_code) {
 }
 
 if(isset($_POST['register'])) {
+    checkGuest(); // Add this line
     $names = sanitizeInput($_POST['names']);
     $email = filter_var(sanitizeInput($_POST['email']), FILTER_SANITIZE_EMAIL);
     $phone = preg_replace('/\D/', '', sanitizeInput($_POST['phone']));
@@ -89,7 +108,7 @@ if(isset($_POST['register'])) {
     $secret = $google2fa->generateSecretKey();
 
     if(insertUser($names, $email, $phone, $hashed_password, $email_otp, $phone_otp, $secret)) {
-        header("Location: otp.php");
+        header("Location: /mfa-php/auth/otp");
         exit();
     }
 }
@@ -154,6 +173,5 @@ if(isset($_POST['register'])) {
 // }
 
 if(isset($_POST['login'])) {
-    
-    
+    checkGuest(); // Add this line
 }

@@ -1,5 +1,6 @@
 <?php
-include_once 'controls.php';
+require_once 'controls.php';
+checkGuest();
 ?>
 
 <!DOCTYPE html>
