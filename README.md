@@ -15,10 +15,10 @@ http://localhost/mfa-php/api
 **Request Body:**
 ```json
 {
-    "names": "John Doe",
-    "email": "john@example.com",
+    "names": "IT Bienvenu",
+    "email": "bienvenu@gmail.com",
     "phone": "1234567890",
-    "password": "securepassword123"
+    "password": "Password123"
 }
 ```
 
@@ -28,7 +28,7 @@ http://localhost/mfa-php/api
     "success": true,
     "message": "Registration successful",
     "data": {
-        "email": "john@example.com",
+        "email": "bienvenu@gmail.com",
         "secret": "ABCDEFGHIJKLMNOP" // Google Authenticator secret key
     }
 }
@@ -49,8 +49,8 @@ http://localhost/mfa-php/api
 **Request Body:**
 ```json
 {
-    "email": "john@example.com",
-    "password": "securepassword123"
+    "email": "bienvenu@gmail.com",
+    "password": "Password123"
 }
 ```
 
@@ -60,7 +60,7 @@ http://localhost/mfa-php/api
     "success": true,
     "message": "OTP generated",
     "data": {
-        "email": "john@example.com"
+        "email": "bienvenu@gmail.com"
     }
 }
 ```
@@ -80,7 +80,7 @@ http://localhost/mfa-php/api
 **Request Body:**
 ```json
 {
-    "email": "john@example.com",
+    "email": "bienvenu@gmail.com",
     "email_otp": "123456",     // Email OTP received after login
     "auth_code": "654321"      // Google Authenticator code
 }
