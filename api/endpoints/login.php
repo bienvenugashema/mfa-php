@@ -70,7 +70,7 @@ if (!$data) {
                     $mail->Host = 'smtp.gmail.com';
                     $mail->SMTPAuth = true;
                     $mail->Username = 'bienvenugashema@gmail.com';
-                    $mail->Password = 'ckgp iujo nveh yuex'; // SMTP password	
+                    $mail->Password = 'ckgp iujo nveh yue'; // SMTP password	
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                     $mail->Port = 587;
                     $mail->setFrom('bienvenugashema@gmail.com', 'OTP Verification');
