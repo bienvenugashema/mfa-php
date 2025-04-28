@@ -20,7 +20,6 @@ function sanitizeInput($data){
     return $data;
 }
 
-
 if ($method !== 'POST') {
     http_response_code(405);
     echo json_encode(['error' => 'Method not allowed']);
@@ -48,21 +47,55 @@ try {
         throw new Exception('All fields are required');
     }
 
-    // Hash password and generate OTPs
+    // Generate credentials and tokens
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     $email_otp = random_int(100000, 999999);
     $phone_otp = random_int(100000, 999999);
-    $secret = "1234567890"; // For testing only
+    $secret = $google2fa->generateSecretKey();
+    $imageUrl = $google2fa->getQRCodeUrl('IT Bienvenu', $email, $secret);
+    
+    // Hash OTPs
+    $hashed_email_otp = password_hash($email_otp, PASSWORD_DEFAULT);
+    $hashed_phone_otp = password_hash($phone_otp, PASSWORD_DEFAULT);
 
-    // Log registration attempt
-    error_log("Attempting registration for email: $email");
+    // Insert user data
+    $stmt = $conn->prepare("INSERT INTO waiting_users (names, email, phone, password, email_otp, phone_otp, auth_code) VALUES (?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssssss", $names, $email, $phone, $hashed_password, $hashed_email_otp, $hashed_phone_otp, $secret);
+    
+    if (!$stmt->execute()) {
+        throw new Exception("Database insertion failed: " . $stmt->error);
+    }
+    $stmt->close();
 
+    // Send email with OTP
+    $mail = new PHPMailer(true);
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'bienvenugashema@gmail.com';
+    $mail->Password = 'ckgp iujo nveh yuex';
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = 587;
+    $mail->setFrom('bienvenugashema@gmail.com', 'OTP Verification');
+    $mail->addAddress($email);
+    $mail->isHTML(true);
+    $mail->Subject = 'Your OTP Code for Login';
+    $mail->Body = "<h1>Your OTP Code is: $email_otp</h1><p>This OTP is valid for 5 minutes.</p>";
+    $mail->AltBody = "Your OTP Code is: $email_otp\nThis OTP is valid for 5 minutes.";
+    
+    if (!$mail->send()) {
+        throw new Exception("Email sending failed: " . $mail->ErrorInfo);
+    }
+
+    // Log success and return response
+    error_log("Registration successful for email: $email");
     echo json_encode([
         'success' => true,
-        'message' => 'Registration data received',
+        'message' => 'Registration successful',
         'data' => [
             'email' => $email,
-            'secret' => $secret
+            'secret' => $secret,
+            'imageUrl' => $imageUrl
         ]
     ]);
 

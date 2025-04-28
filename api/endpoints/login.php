@@ -58,8 +58,9 @@ if (!$data) {
             $user = $result->fetch_assoc();
             if(password_verify($password, $user['password'])) {
                 $otp = random_int(100000, 999999);
+                $hashed_otp = password_hash($otp, PASSWORD_DEFAULT);
                 $updateOtp = $conn->prepare("UPDATE users SET otp = ? WHERE email = ?");
-                $updateOtp->bind_param("ss", $otp, $email);
+                $updateOtp->bind_param("ss", $hashed_otp, $email);
                 $updateOtp->execute();
                 
                 function sendOtpEmail($em, $ot) {

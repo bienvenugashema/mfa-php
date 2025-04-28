@@ -262,3 +262,148 @@ Stack trace:
 [27-Apr-2025 20:06:14 Europe/Berlin] Stored values - OTP: 710261, Auth Code: C4W5KIARBLEU6RIC
 [27-Apr-2025 20:06:14 Europe/Berlin] 2FA Verification result: true
 [27-Apr-2025 20:06:14 Europe/Berlin] Verification successful for: bienvenugashema@gmail.com
+[28-Apr-2025 11:21:09 Europe/Berlin] Request received - Method: POST, Path: verify
+[28-Apr-2025 11:21:09 Europe/Berlin] Endpoint: verify
+[28-Apr-2025 11:21:09 Europe/Berlin] Starting verification process
+[28-Apr-2025 11:21:09 Europe/Berlin] Raw input: {
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "710261",
+    "auth_code": "410144"
+}
+[28-Apr-2025 11:21:09 Europe/Berlin] Decoded data: Array
+(
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 710261
+    [auth_code] => 410144
+)
+
+[28-Apr-2025 11:21:09 Europe/Berlin] Verifying - Email: bienvenugashema@gmail.com, OTP: 710261, Auth Code: 410144
+[28-Apr-2025 11:21:09 Europe/Berlin] Stored values - OTP: 710261, Auth Code: C4W5KIARBLEU6RIC
+[28-Apr-2025 11:21:09 Europe/Berlin] 2FA Verification result: false
+[28-Apr-2025 11:21:09 Europe/Berlin] Verification failed - OTP match: true
+[28-Apr-2025 11:32:39 Europe/Berlin] Request received - Method: POST, Path: register
+[28-Apr-2025 11:32:39 Europe/Berlin] Endpoint: register
+[28-Apr-2025 11:32:39 Europe/Berlin] Processing registration request
+[28-Apr-2025 11:32:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in C:\xampp\htdocs\mfa-php\api\endpoints\register.php:59
+Stack trace:
+#0 C:\xampp\htdocs\mfa-php\api\index.php(33): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\mfa-php\api\endpoints\register.php on line 59
+[28-Apr-2025 11:34:03 Europe/Berlin] Request received - Method: POST, Path: register
+[28-Apr-2025 11:34:03 Europe/Berlin] Endpoint: register
+[28-Apr-2025 11:34:03 Europe/Berlin] Processing registration request
+[28-Apr-2025 11:34:03 Europe/Berlin] Attempting registration for email: mwimulegashema.com
+[28-Apr-2025 11:39:30 Europe/Berlin] Request received - Method: POST, Path: register
+[28-Apr-2025 11:39:30 Europe/Berlin] Endpoint: register
+[28-Apr-2025 11:39:30 Europe/Berlin] Processing registration request
+[28-Apr-2025 11:39:31 Europe/Berlin] Registration error: Database insertion failed: Duplicate entry '1234567890' for key 'phone'
+[28-Apr-2025 11:39:45 Europe/Berlin] Request received - Method: POST, Path: register
+[28-Apr-2025 11:39:45 Europe/Berlin] Endpoint: register
+[28-Apr-2025 11:39:45 Europe/Berlin] Processing registration request
+[28-Apr-2025 11:39:45 Europe/Berlin] Registration initiated for email: mwimulegashema@gmail.com
+[28-Apr-2025 11:41:39 Europe/Berlin] Request received - Method: POST, Path: register
+[28-Apr-2025 11:41:39 Europe/Berlin] Endpoint: register
+[28-Apr-2025 11:41:39 Europe/Berlin] Processing registration request
+[28-Apr-2025 11:41:39 Europe/Berlin] Registration error: Database insertion failed: Duplicate entry '123456789' for key 'phone'
+[28-Apr-2025 11:41:47 Europe/Berlin] Request received - Method: POST, Path: register
+[28-Apr-2025 11:41:47 Europe/Berlin] Endpoint: register
+[28-Apr-2025 11:41:47 Europe/Berlin] Processing registration request
+[28-Apr-2025 11:41:47 Europe/Berlin] Registration initiated for email: bienvenugashema@.com
+[28-Apr-2025 11:41:58 Europe/Berlin] Request received - Method: POST, Path: register
+[28-Apr-2025 11:41:58 Europe/Berlin] Endpoint: register
+[28-Apr-2025 11:41:58 Europe/Berlin] Processing registration request
+[28-Apr-2025 11:41:58 Europe/Berlin] Registration initiated for email: bienvenugashema@gmail.com
+[28-Apr-2025 11:47:54 Europe/Berlin] Request received - Method: POST, Path: register
+[28-Apr-2025 11:47:54 Europe/Berlin] Endpoint: register
+[28-Apr-2025 11:47:54 Europe/Berlin] PHP Parse error:  Unclosed '{' on line 39 in C:\xampp\htdocs\mfa-php\api\endpoints\register.php on line 114
+[28-Apr-2025 11:48:15 Europe/Berlin] Request received - Method: POST, Path: register
+[28-Apr-2025 11:48:15 Europe/Berlin] Endpoint: register
+[28-Apr-2025 11:48:15 Europe/Berlin] PHP Fatal error:  Cannot use try without catch or finally in C:\xampp\htdocs\mfa-php\api\endpoints\register.php on line 39
+[28-Apr-2025 11:50:11 Europe/Berlin] Request received - Method: POST, Path: register
+[28-Apr-2025 11:50:11 Europe/Berlin] Endpoint: register
+[28-Apr-2025 11:50:11 Europe/Berlin] Processing registration request
+[28-Apr-2025 11:50:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PragmaRX\Google2FA\Google2FA::getQRCodeGoogleUrl() in C:\xampp\htdocs\mfa-php\api\endpoints\register.php:56
+Stack trace:
+#0 C:\xampp\htdocs\mfa-php\api\index.php(33): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\mfa-php\api\endpoints\register.php on line 56
+[28-Apr-2025 11:50:58 Europe/Berlin] Request received - Method: POST, Path: register
+[28-Apr-2025 11:50:58 Europe/Berlin] Endpoint: register
+[28-Apr-2025 11:50:58 Europe/Berlin] Processing registration request
+[28-Apr-2025 11:50:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PragmaRX\Google2FA\Google2FA::getQRCodeGoogleUrl() in C:\xampp\htdocs\mfa-php\api\endpoints\register.php:55
+Stack trace:
+#0 C:\xampp\htdocs\mfa-php\api\index.php(33): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\mfa-php\api\endpoints\register.php on line 55
+[28-Apr-2025 11:51:00 Europe/Berlin] Request received - Method: POST, Path: register
+[28-Apr-2025 11:51:00 Europe/Berlin] Endpoint: register
+[28-Apr-2025 11:51:00 Europe/Berlin] Processing registration request
+[28-Apr-2025 11:51:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PragmaRX\Google2FA\Google2FA::getQRCodeGoogleUrl() in C:\xampp\htdocs\mfa-php\api\endpoints\register.php:55
+Stack trace:
+#0 C:\xampp\htdocs\mfa-php\api\index.php(33): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\mfa-php\api\endpoints\register.php on line 55
+[28-Apr-2025 11:51:01 Europe/Berlin] Request received - Method: POST, Path: register
+[28-Apr-2025 11:51:01 Europe/Berlin] Endpoint: register
+[28-Apr-2025 11:51:01 Europe/Berlin] Processing registration request
+[28-Apr-2025 11:51:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PragmaRX\Google2FA\Google2FA::getQRCodeGoogleUrl() in C:\xampp\htdocs\mfa-php\api\endpoints\register.php:55
+Stack trace:
+#0 C:\xampp\htdocs\mfa-php\api\index.php(33): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\mfa-php\api\endpoints\register.php on line 55
+[28-Apr-2025 11:51:01 Europe/Berlin] Request received - Method: POST, Path: register
+[28-Apr-2025 11:51:01 Europe/Berlin] Endpoint: register
+[28-Apr-2025 11:51:01 Europe/Berlin] Processing registration request
+[28-Apr-2025 11:51:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PragmaRX\Google2FA\Google2FA::getQRCodeGoogleUrl() in C:\xampp\htdocs\mfa-php\api\endpoints\register.php:55
+Stack trace:
+#0 C:\xampp\htdocs\mfa-php\api\index.php(33): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\mfa-php\api\endpoints\register.php on line 55
+[28-Apr-2025 11:51:02 Europe/Berlin] Request received - Method: POST, Path: register
+[28-Apr-2025 11:51:02 Europe/Berlin] Endpoint: register
+[28-Apr-2025 11:51:02 Europe/Berlin] Processing registration request
+[28-Apr-2025 11:51:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PragmaRX\Google2FA\Google2FA::getQRCodeGoogleUrl() in C:\xampp\htdocs\mfa-php\api\endpoints\register.php:55
+Stack trace:
+#0 C:\xampp\htdocs\mfa-php\api\index.php(33): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\mfa-php\api\endpoints\register.php on line 55
+[28-Apr-2025 11:51:03 Europe/Berlin] Request received - Method: POST, Path: register
+[28-Apr-2025 11:51:03 Europe/Berlin] Endpoint: register
+[28-Apr-2025 11:51:03 Europe/Berlin] Processing registration request
+[28-Apr-2025 11:51:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PragmaRX\Google2FA\Google2FA::getQRCodeGoogleUrl() in C:\xampp\htdocs\mfa-php\api\endpoints\register.php:55
+Stack trace:
+#0 C:\xampp\htdocs\mfa-php\api\index.php(33): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\mfa-php\api\endpoints\register.php on line 55
+[28-Apr-2025 11:51:04 Europe/Berlin] Request received - Method: POST, Path: register
+[28-Apr-2025 11:51:04 Europe/Berlin] Endpoint: register
+[28-Apr-2025 11:51:04 Europe/Berlin] Processing registration request
+[28-Apr-2025 11:51:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PragmaRX\Google2FA\Google2FA::getQRCodeGoogleUrl() in C:\xampp\htdocs\mfa-php\api\endpoints\register.php:55
+Stack trace:
+#0 C:\xampp\htdocs\mfa-php\api\index.php(33): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\mfa-php\api\endpoints\register.php on line 55
+[28-Apr-2025 11:51:05 Europe/Berlin] Request received - Method: POST, Path: register
+[28-Apr-2025 11:51:05 Europe/Berlin] Endpoint: register
+[28-Apr-2025 11:51:05 Europe/Berlin] Processing registration request
+[28-Apr-2025 11:51:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PragmaRX\Google2FA\Google2FA::getQRCodeGoogleUrl() in C:\xampp\htdocs\mfa-php\api\endpoints\register.php:55
+Stack trace:
+#0 C:\xampp\htdocs\mfa-php\api\index.php(33): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\mfa-php\api\endpoints\register.php on line 55
+[28-Apr-2025 11:51:06 Europe/Berlin] Request received - Method: POST, Path: register
+[28-Apr-2025 11:51:06 Europe/Berlin] Endpoint: register
+[28-Apr-2025 11:51:06 Europe/Berlin] Processing registration request
+[28-Apr-2025 11:51:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PragmaRX\Google2FA\Google2FA::getQRCodeGoogleUrl() in C:\xampp\htdocs\mfa-php\api\endpoints\register.php:55
+Stack trace:
+#0 C:\xampp\htdocs\mfa-php\api\index.php(33): require_once()
+#1 {main}
+  thrown in C:\xampp\htdocs\mfa-php\api\endpoints\register.php on line 55
+[28-Apr-2025 11:53:17 Europe/Berlin] Request received - Method: POST, Path: register
+[28-Apr-2025 11:53:17 Europe/Berlin] Endpoint: register
+[28-Apr-2025 11:53:17 Europe/Berlin] Processing registration request
+[28-Apr-2025 11:53:22 Europe/Berlin] Registration successful for email: bienvenugashema@gmail.com
+[28-Apr-2025 12:19:00 Europe/Berlin] Request received - Method: POST, Path: register
+[28-Apr-2025 12:19:00 Europe/Berlin] Endpoint: register
+[28-Apr-2025 12:19:00 Europe/Berlin] Processing registration request
+[28-Apr-2025 12:19:05 Europe/Berlin] Registration successful for email: bienvenugashema@gmail.com
