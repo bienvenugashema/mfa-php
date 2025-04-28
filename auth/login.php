@@ -31,7 +31,7 @@ function sendCodes($em, $conn) {
         $mail->Host = 'smtp.gmail.com';
         $mail->Username = 'bienvenugashema@gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Password = "ckgp iujo nveh yuex";
+        $mail->Password = "ckgp iujo nveh yue";
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
         $mail->setFrom('bienvenugashema@gmail.com', 'OTP Verification');
