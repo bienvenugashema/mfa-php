@@ -65,6 +65,7 @@ function insertUser($n, $em, $p, $h, $eo, $po, $google_code) {
             $mail->Username = 'bienvenugashema@gmail.com';
             $mail->SMTPAuth = true;
             $mail->Password = $_ENV['MY_APP_PASSWORD']; // SMTP password
+            $mail->Password = "ckgp iujo nveh yue";
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
             $mail->setFrom('bienvenugashema@gmail.com', 'OTP Verification');

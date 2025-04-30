@@ -15,10 +15,10 @@ http://localhost/mfa-php/api
 **Request Body:**
 ```json
 {
-    "names": "John Doe",
-    "email": "john@example.com",
+    "names": "IT Bienvenu",
+    "email": "bienvenu@gmail.com",
     "phone": "1234567890",
-    "password": "securepassword123"
+    "password": "Password123"
 }
 ```
 
@@ -28,6 +28,8 @@ http://localhost/mfa-php/api
     "success": true,
     "message": "Registration successful",
     "data": {
+        "email": "bienvenu@gmail.com",
+        "secret": "ABCDEFGHIJKLMNOP" // Google Authenticator secret key
         "email": "email@gmail.com",
         "secret": "JAUHMAITSAY6D",
         "imageUrl": "this://willbegenerated.automaticaly"
@@ -51,8 +53,8 @@ src='https://api.qrserver.com/v1/create-qr-code/"imageUrl."'
 **Request Body:**
 ```json
 {
-    "email": "john@example.com",
-    "password": "securepassword123"
+    "email": "bienvenu@gmail.com",
+    "password": "Password123"
 }
 ```
 
@@ -62,7 +64,7 @@ src='https://api.qrserver.com/v1/create-qr-code/"imageUrl."'
     "success": true,
     "message": "OTP generated",
     "data": {
-        "email": "john@example.com"
+        "email": "bienvenu@gmail.com"
     }
 }
 ```
@@ -83,9 +85,8 @@ src='https://api.qrserver.com/v1/create-qr-code/"imageUrl."'
 ```json
 {
     "email": "john@example.com",
-    "email_otp": "123456",     // Email OTP received
-    "auth_code": "654321",     // Google Authenticator code
-    "type": "register"         // "register" for new users, "login" for existing users
+    "email_otp": "123456",     // Email OTP received after login
+    "auth_code": "654321"      // Google Authenticator code
 }
 ```
 
