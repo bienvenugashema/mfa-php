@@ -407,3 +407,672 @@ Stack trace:
 [28-Apr-2025 12:19:00 Europe/Berlin] Endpoint: register
 [28-Apr-2025 12:19:00 Europe/Berlin] Processing registration request
 [28-Apr-2025 12:19:05 Europe/Berlin] Registration successful for email: bienvenugashema@gmail.com
+[28-Apr-2025 12:22:14 Europe/Berlin] Request received - Method: POST, Path: verify
+[28-Apr-2025 12:22:14 Europe/Berlin] Endpoint: verify
+[28-Apr-2025 12:22:14 Europe/Berlin] Starting verification process
+[28-Apr-2025 12:22:14 Europe/Berlin] Raw input: {
+    "type": "register",
+    "email": "bienvenugashema@.com",
+    "email_otp": "963123",
+    "auth_code": "996248"
+}
+[28-Apr-2025 12:22:14 Europe/Berlin] Decoded data: Array
+(
+    [type] => register
+    [email] => bienvenugashema@.com
+    [email_otp] => 963123
+    [auth_code] => 996248
+)
+
+[28-Apr-2025 12:22:14 Europe/Berlin] Verification type: register for email: bienvenugashema@.com
+[28-Apr-2025 12:22:29 Europe/Berlin] Request received - Method: POST, Path: verify
+[28-Apr-2025 12:22:29 Europe/Berlin] Endpoint: verify
+[28-Apr-2025 12:22:29 Europe/Berlin] Starting verification process
+[28-Apr-2025 12:22:29 Europe/Berlin] Raw input: {
+    "type": "register",
+    "email": "bienvenugashema@.com",
+    "email_otp": "963123",
+    "auth_code": "996248"
+}
+[28-Apr-2025 12:22:29 Europe/Berlin] Decoded data: Array
+(
+    [type] => register
+    [email] => bienvenugashema@.com
+    [email_otp] => 963123
+    [auth_code] => 996248
+)
+
+[28-Apr-2025 12:22:29 Europe/Berlin] Verification type: register for email: bienvenugashema@.com
+[29-Apr-2025 14:36:14 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:36:14 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:36:14 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:36:14 Europe/Berlin] Raw input: {
+    "type": "register",
+    "email": "bienvenugashema@.com",
+    "email_otp": "963123",
+    "auth_code": "996248"
+}
+[29-Apr-2025 14:36:14 Europe/Berlin] Decoded data: Array
+(
+    [type] => register
+    [email] => bienvenugashema@.com
+    [email_otp] => 963123
+    [auth_code] => 996248
+)
+
+[29-Apr-2025 14:36:14 Europe/Berlin] Verification type: register for email: bienvenugashema@.com
+[29-Apr-2025 14:37:16 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:37:16 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:37:16 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:37:16 Europe/Berlin] Raw input: {
+    "type": "register",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "963123",
+    "auth_code": "996248"
+}
+[29-Apr-2025 14:37:16 Europe/Berlin] Decoded data: Array
+(
+    [type] => register
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 963123
+    [auth_code] => 996248
+)
+
+[29-Apr-2025 14:37:16 Europe/Berlin] Verification type: register for email: bienvenugashema@gmail.com
+[29-Apr-2025 14:38:06 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:38:06 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:38:06 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:38:06 Europe/Berlin] Raw input: {
+    "type": "register",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "963123",
+    "auth_code": "848939"
+}
+[29-Apr-2025 14:38:06 Europe/Berlin] Decoded data: Array
+(
+    [type] => register
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 963123
+    [auth_code] => 848939
+)
+
+[29-Apr-2025 14:38:06 Europe/Berlin] Verification type: register for email: bienvenugashema@gmail.com
+[29-Apr-2025 14:40:06 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:40:06 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:40:06 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:40:06 Europe/Berlin] Raw input: {
+    "type": "register",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "963123",
+    "auth_code": "104364"
+}
+[29-Apr-2025 14:40:06 Europe/Berlin] Decoded data: Array
+(
+    [type] => register
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 963123
+    [auth_code] => 104364
+)
+
+[29-Apr-2025 14:40:06 Europe/Berlin] Verification type: register for email: bienvenugashema@gmail.com
+[29-Apr-2025 14:46:19 Europe/Berlin] Request received - Method: POST, Path: register
+[29-Apr-2025 14:46:19 Europe/Berlin] Endpoint: register
+[29-Apr-2025 14:46:19 Europe/Berlin] Processing registration request
+[29-Apr-2025 14:46:25 Europe/Berlin] Registration successful for email: bienvenugashema@gmail.com
+[29-Apr-2025 14:48:08 Europe/Berlin] Request received - Method: POST, Path: verfiy
+[29-Apr-2025 14:48:08 Europe/Berlin] Endpoint: verfiy
+[29-Apr-2025 14:48:24 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:48:24 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:48:24 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:48:24 Europe/Berlin] Raw input: {
+    "names": "Mwimule Bienvenu",
+    "email": "bienvenugashema@gmail.com",
+    "phone": "0781300739",
+    "password": "123"
+}
+[29-Apr-2025 14:48:24 Europe/Berlin] Decoded data: Array
+(
+    [names] => Mwimule Bienvenu
+    [email] => bienvenugashema@gmail.com
+    [phone] => 0781300739
+    [password] => 123
+)
+
+[29-Apr-2025 14:48:24 Europe/Berlin] Verification error: Email, OTP, authentication code and type are required
+[29-Apr-2025 14:48:43 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:48:43 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:48:43 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:48:43 Europe/Berlin] Raw input: {
+    "type": "register",
+    "email": "bienvenugashema@gmail.com",
+    "phone": "0781300739",
+    "password": "123"
+}
+[29-Apr-2025 14:48:43 Europe/Berlin] Decoded data: Array
+(
+    [type] => register
+    [email] => bienvenugashema@gmail.com
+    [phone] => 0781300739
+    [password] => 123
+)
+
+[29-Apr-2025 14:48:43 Europe/Berlin] Verification error: Email, OTP, authentication code and type are required
+[29-Apr-2025 14:49:18 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:49:18 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:49:18 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:49:18 Europe/Berlin] Raw input: {
+    "type": "register",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "380761",
+    "authcode": "123"
+}
+[29-Apr-2025 14:49:18 Europe/Berlin] Decoded data: Array
+(
+    [type] => register
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 380761
+    [authcode] => 123
+)
+
+[29-Apr-2025 14:49:18 Europe/Berlin] Verification error: Email, OTP, authentication code and type are required
+[29-Apr-2025 14:50:34 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:50:34 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:50:34 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:50:34 Europe/Berlin] Raw input: {
+    "type": "register",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "380761",
+    "authcode": "336290"
+}
+[29-Apr-2025 14:50:34 Europe/Berlin] Decoded data: Array
+(
+    [type] => register
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 380761
+    [authcode] => 336290
+)
+
+[29-Apr-2025 14:50:34 Europe/Berlin] Verification error: Email, OTP, authentication code and type are required
+[29-Apr-2025 14:50:35 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:50:35 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:50:35 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:50:35 Europe/Berlin] Raw input: {
+    "type": "register",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "380761",
+    "authcode": "336290"
+}
+[29-Apr-2025 14:50:35 Europe/Berlin] Decoded data: Array
+(
+    [type] => register
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 380761
+    [authcode] => 336290
+)
+
+[29-Apr-2025 14:50:35 Europe/Berlin] Verification error: Email, OTP, authentication code and type are required
+[29-Apr-2025 14:50:36 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:50:36 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:50:36 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:50:36 Europe/Berlin] Raw input: {
+    "type": "register",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "380761",
+    "authcode": "336290"
+}
+[29-Apr-2025 14:50:36 Europe/Berlin] Decoded data: Array
+(
+    [type] => register
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 380761
+    [authcode] => 336290
+)
+
+[29-Apr-2025 14:50:36 Europe/Berlin] Verification error: Email, OTP, authentication code and type are required
+[29-Apr-2025 14:50:37 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:50:37 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:50:37 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:50:37 Europe/Berlin] Raw input: {
+    "type": "register",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "380761",
+    "authcode": "336290"
+}
+[29-Apr-2025 14:50:37 Europe/Berlin] Decoded data: Array
+(
+    [type] => register
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 380761
+    [authcode] => 336290
+)
+
+[29-Apr-2025 14:50:37 Europe/Berlin] Verification error: Email, OTP, authentication code and type are required
+[29-Apr-2025 14:50:37 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:50:37 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:50:37 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:50:37 Europe/Berlin] Raw input: {
+    "type": "register",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "380761",
+    "authcode": "336290"
+}
+[29-Apr-2025 14:50:37 Europe/Berlin] Decoded data: Array
+(
+    [type] => register
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 380761
+    [authcode] => 336290
+)
+
+[29-Apr-2025 14:50:37 Europe/Berlin] Verification error: Email, OTP, authentication code and type are required
+[29-Apr-2025 14:50:37 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:50:37 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:50:37 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:50:37 Europe/Berlin] Raw input: {
+    "type": "register",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "380761",
+    "authcode": "336290"
+}
+[29-Apr-2025 14:50:37 Europe/Berlin] Decoded data: Array
+(
+    [type] => register
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 380761
+    [authcode] => 336290
+)
+
+[29-Apr-2025 14:50:37 Europe/Berlin] Verification error: Email, OTP, authentication code and type are required
+[29-Apr-2025 14:50:45 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:50:45 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:50:45 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:50:45 Europe/Berlin] Raw input: {
+    "type": "register",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "380761",
+    "auth_code": "336290"
+}
+[29-Apr-2025 14:50:45 Europe/Berlin] Decoded data: Array
+(
+    [type] => register
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 380761
+    [auth_code] => 336290
+)
+
+[29-Apr-2025 14:50:45 Europe/Berlin] Verification type: register for email: bienvenugashema@gmail.com
+[29-Apr-2025 14:51:11 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:51:11 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:51:11 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:51:11 Europe/Berlin] Raw input: {
+    "type": "register",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "380761",
+    "auth_code": "208388"
+}
+[29-Apr-2025 14:51:11 Europe/Berlin] Decoded data: Array
+(
+    [type] => register
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 380761
+    [auth_code] => 208388
+)
+
+[29-Apr-2025 14:51:11 Europe/Berlin] Verification type: register for email: bienvenugashema@gmail.com
+[29-Apr-2025 14:51:34 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:51:34 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:51:34 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:51:34 Europe/Berlin] Raw input: {
+    "type": "register",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "380761",
+    "auth_code": "415129"
+}
+[29-Apr-2025 14:51:34 Europe/Berlin] Decoded data: Array
+(
+    [type] => register
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 380761
+    [auth_code] => 415129
+)
+
+[29-Apr-2025 14:51:34 Europe/Berlin] Verification type: register for email: bienvenugashema@gmail.com
+[29-Apr-2025 14:52:35 Europe/Berlin] Request received - Method: POST, Path: login
+[29-Apr-2025 14:52:35 Europe/Berlin] Endpoint: login
+[29-Apr-2025 14:52:35 Europe/Berlin] Processing login request
+[29-Apr-2025 14:52:35 Europe/Berlin] Raw input: {
+    "email": "bienvenugashema@gmail.com",
+    "password": "123"
+}
+[29-Apr-2025 14:52:35 Europe/Berlin] Decoded data: Array
+(
+    [email] => bienvenugashema@gmail.com
+    [password] => 123
+)
+
+[29-Apr-2025 14:52:35 Europe/Berlin] Attempting login for email: bienvenugashema@gmail.com
+[29-Apr-2025 14:55:12 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:55:12 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:55:12 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:55:12 Europe/Berlin] Raw input: {
+    "type": "login",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "478023",
+    "auth_code": "205811"
+}
+[29-Apr-2025 14:55:12 Europe/Berlin] Decoded data: Array
+(
+    [type] => login
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 478023
+    [auth_code] => 205811
+)
+
+[29-Apr-2025 14:55:12 Europe/Berlin] Verification type: login for email: bienvenugashema@gmail.com
+[29-Apr-2025 14:55:12 Europe/Berlin] Stored values - OTP: $2y$10$1REXcHx0yqj2vRXQ0RLOmun4uKc1vRG2UNO77MqaXyFl4aU2dxwhi, Auth Code: GMIECS4VOOPRFDZ6
+[29-Apr-2025 14:55:12 Europe/Berlin] 2FA Verification result: true
+[29-Apr-2025 14:55:12 Europe/Berlin] Verification successful for: bienvenugashema@gmail.com
+[29-Apr-2025 14:55:41 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:55:41 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:55:41 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:55:41 Europe/Berlin] Raw input: {
+    "type": "login",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "478023",
+    "auth_code": "205811"
+}
+[29-Apr-2025 14:55:41 Europe/Berlin] Decoded data: Array
+(
+    [type] => login
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 478023
+    [auth_code] => 205811
+)
+
+[29-Apr-2025 14:55:41 Europe/Berlin] Verification type: login for email: bienvenugashema@gmail.com
+[29-Apr-2025 14:55:41 Europe/Berlin] Stored values - OTP: $2y$10$1REXcHx0yqj2vRXQ0RLOmun4uKc1vRG2UNO77MqaXyFl4aU2dxwhi, Auth Code: GMIECS4VOOPRFDZ6
+[29-Apr-2025 14:55:41 Europe/Berlin] 2FA Verification result: true
+[29-Apr-2025 14:55:41 Europe/Berlin] Verification successful for: bienvenugashema@gmail.com
+[29-Apr-2025 14:55:42 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:55:42 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:55:42 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:55:42 Europe/Berlin] Raw input: {
+    "type": "login",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "478023",
+    "auth_code": "205811"
+}
+[29-Apr-2025 14:55:42 Europe/Berlin] Decoded data: Array
+(
+    [type] => login
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 478023
+    [auth_code] => 205811
+)
+
+[29-Apr-2025 14:55:42 Europe/Berlin] Verification type: login for email: bienvenugashema@gmail.com
+[29-Apr-2025 14:55:42 Europe/Berlin] Stored values - OTP: $2y$10$1REXcHx0yqj2vRXQ0RLOmun4uKc1vRG2UNO77MqaXyFl4aU2dxwhi, Auth Code: GMIECS4VOOPRFDZ6
+[29-Apr-2025 14:55:42 Europe/Berlin] 2FA Verification result: true
+[29-Apr-2025 14:55:42 Europe/Berlin] Verification successful for: bienvenugashema@gmail.com
+[29-Apr-2025 14:55:43 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:55:43 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:55:43 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:55:43 Europe/Berlin] Raw input: {
+    "type": "login",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "478023",
+    "auth_code": "205811"
+}
+[29-Apr-2025 14:55:43 Europe/Berlin] Decoded data: Array
+(
+    [type] => login
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 478023
+    [auth_code] => 205811
+)
+
+[29-Apr-2025 14:55:43 Europe/Berlin] Verification type: login for email: bienvenugashema@gmail.com
+[29-Apr-2025 14:55:43 Europe/Berlin] Stored values - OTP: $2y$10$1REXcHx0yqj2vRXQ0RLOmun4uKc1vRG2UNO77MqaXyFl4aU2dxwhi, Auth Code: GMIECS4VOOPRFDZ6
+[29-Apr-2025 14:55:43 Europe/Berlin] 2FA Verification result: true
+[29-Apr-2025 14:55:43 Europe/Berlin] Verification successful for: bienvenugashema@gmail.com
+[29-Apr-2025 14:55:44 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:55:44 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:55:44 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:55:44 Europe/Berlin] Raw input: {
+    "type": "login",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "478023",
+    "auth_code": "205811"
+}
+[29-Apr-2025 14:55:44 Europe/Berlin] Decoded data: Array
+(
+    [type] => login
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 478023
+    [auth_code] => 205811
+)
+
+[29-Apr-2025 14:55:44 Europe/Berlin] Verification type: login for email: bienvenugashema@gmail.com
+[29-Apr-2025 14:55:44 Europe/Berlin] Stored values - OTP: $2y$10$1REXcHx0yqj2vRXQ0RLOmun4uKc1vRG2UNO77MqaXyFl4aU2dxwhi, Auth Code: GMIECS4VOOPRFDZ6
+[29-Apr-2025 14:55:44 Europe/Berlin] 2FA Verification result: true
+[29-Apr-2025 14:55:44 Europe/Berlin] Verification successful for: bienvenugashema@gmail.com
+[29-Apr-2025 14:55:55 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:55:55 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:55:55 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:55:55 Europe/Berlin] Raw input: {
+    "type": "login",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "478024",
+    "auth_code": "205811"
+}
+[29-Apr-2025 14:55:55 Europe/Berlin] Decoded data: Array
+(
+    [type] => login
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 478024
+    [auth_code] => 205811
+)
+
+[29-Apr-2025 14:55:55 Europe/Berlin] Verification type: login for email: bienvenugashema@gmail.com
+[29-Apr-2025 14:55:55 Europe/Berlin] Stored values - OTP: $2y$10$1REXcHx0yqj2vRXQ0RLOmun4uKc1vRG2UNO77MqaXyFl4aU2dxwhi, Auth Code: GMIECS4VOOPRFDZ6
+[29-Apr-2025 14:55:55 Europe/Berlin] 2FA Verification result: true
+[29-Apr-2025 14:55:55 Europe/Berlin] Verification failed - OTP match: false
+[29-Apr-2025 14:55:57 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:55:57 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:55:57 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:55:57 Europe/Berlin] Raw input: {
+    "type": "login",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "478024",
+    "auth_code": "205811"
+}
+[29-Apr-2025 14:55:57 Europe/Berlin] Decoded data: Array
+(
+    [type] => login
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 478024
+    [auth_code] => 205811
+)
+
+[29-Apr-2025 14:55:57 Europe/Berlin] Verification type: login for email: bienvenugashema@gmail.com
+[29-Apr-2025 14:55:57 Europe/Berlin] Stored values - OTP: $2y$10$1REXcHx0yqj2vRXQ0RLOmun4uKc1vRG2UNO77MqaXyFl4aU2dxwhi, Auth Code: GMIECS4VOOPRFDZ6
+[29-Apr-2025 14:55:57 Europe/Berlin] 2FA Verification result: true
+[29-Apr-2025 14:55:57 Europe/Berlin] Verification failed - OTP match: false
+[29-Apr-2025 14:56:10 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:56:10 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:56:10 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:56:10 Europe/Berlin] Raw input: {
+    "type": "login",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "478023",
+    "auth_code": "205811"
+}
+[29-Apr-2025 14:56:10 Europe/Berlin] Decoded data: Array
+(
+    [type] => login
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 478023
+    [auth_code] => 205811
+)
+
+[29-Apr-2025 14:56:10 Europe/Berlin] Verification type: login for email: bienvenugashema@gmail.com
+[29-Apr-2025 14:56:10 Europe/Berlin] Stored values - OTP: $2y$10$1REXcHx0yqj2vRXQ0RLOmun4uKc1vRG2UNO77MqaXyFl4aU2dxwhi, Auth Code: GMIECS4VOOPRFDZ6
+[29-Apr-2025 14:56:10 Europe/Berlin] 2FA Verification result: false
+[29-Apr-2025 14:56:10 Europe/Berlin] Verification failed - OTP match: false
+[29-Apr-2025 14:56:11 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:56:11 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:56:11 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:56:11 Europe/Berlin] Raw input: {
+    "type": "login",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "478023",
+    "auth_code": "205811"
+}
+[29-Apr-2025 14:56:11 Europe/Berlin] Decoded data: Array
+(
+    [type] => login
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 478023
+    [auth_code] => 205811
+)
+
+[29-Apr-2025 14:56:11 Europe/Berlin] Verification type: login for email: bienvenugashema@gmail.com
+[29-Apr-2025 14:56:11 Europe/Berlin] Stored values - OTP: $2y$10$1REXcHx0yqj2vRXQ0RLOmun4uKc1vRG2UNO77MqaXyFl4aU2dxwhi, Auth Code: GMIECS4VOOPRFDZ6
+[29-Apr-2025 14:56:11 Europe/Berlin] 2FA Verification result: false
+[29-Apr-2025 14:56:11 Europe/Berlin] Verification failed - OTP match: false
+[29-Apr-2025 14:56:12 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:56:12 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:56:12 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:56:12 Europe/Berlin] Raw input: {
+    "type": "login",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "478023",
+    "auth_code": "205811"
+}
+[29-Apr-2025 14:56:12 Europe/Berlin] Decoded data: Array
+(
+    [type] => login
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 478023
+    [auth_code] => 205811
+)
+
+[29-Apr-2025 14:56:12 Europe/Berlin] Verification type: login for email: bienvenugashema@gmail.com
+[29-Apr-2025 14:56:12 Europe/Berlin] Stored values - OTP: $2y$10$1REXcHx0yqj2vRXQ0RLOmun4uKc1vRG2UNO77MqaXyFl4aU2dxwhi, Auth Code: GMIECS4VOOPRFDZ6
+[29-Apr-2025 14:56:12 Europe/Berlin] 2FA Verification result: false
+[29-Apr-2025 14:56:12 Europe/Berlin] Verification failed - OTP match: false
+[29-Apr-2025 14:56:13 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:56:13 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:56:13 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:56:13 Europe/Berlin] Raw input: {
+    "type": "login",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "478023",
+    "auth_code": "205811"
+}
+[29-Apr-2025 14:56:13 Europe/Berlin] Decoded data: Array
+(
+    [type] => login
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 478023
+    [auth_code] => 205811
+)
+
+[29-Apr-2025 14:56:13 Europe/Berlin] Verification type: login for email: bienvenugashema@gmail.com
+[29-Apr-2025 14:56:13 Europe/Berlin] Stored values - OTP: $2y$10$1REXcHx0yqj2vRXQ0RLOmun4uKc1vRG2UNO77MqaXyFl4aU2dxwhi, Auth Code: GMIECS4VOOPRFDZ6
+[29-Apr-2025 14:56:13 Europe/Berlin] 2FA Verification result: false
+[29-Apr-2025 14:56:13 Europe/Berlin] Verification failed - OTP match: false
+[29-Apr-2025 14:56:13 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:56:13 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:56:13 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:56:13 Europe/Berlin] Raw input: {
+    "type": "login",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "478023",
+    "auth_code": "205811"
+}
+[29-Apr-2025 14:56:13 Europe/Berlin] Decoded data: Array
+(
+    [type] => login
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 478023
+    [auth_code] => 205811
+)
+
+[29-Apr-2025 14:56:13 Europe/Berlin] Verification type: login for email: bienvenugashema@gmail.com
+[29-Apr-2025 14:56:13 Europe/Berlin] Stored values - OTP: $2y$10$1REXcHx0yqj2vRXQ0RLOmun4uKc1vRG2UNO77MqaXyFl4aU2dxwhi, Auth Code: GMIECS4VOOPRFDZ6
+[29-Apr-2025 14:56:13 Europe/Berlin] 2FA Verification result: false
+[29-Apr-2025 14:56:13 Europe/Berlin] Verification failed - OTP match: false
+[29-Apr-2025 14:56:14 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:56:14 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:56:14 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:56:14 Europe/Berlin] Raw input: {
+    "type": "login",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "478023",
+    "auth_code": "205811"
+}
+[29-Apr-2025 14:56:14 Europe/Berlin] Decoded data: Array
+(
+    [type] => login
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 478023
+    [auth_code] => 205811
+)
+
+[29-Apr-2025 14:56:14 Europe/Berlin] Verification type: login for email: bienvenugashema@gmail.com
+[29-Apr-2025 14:56:14 Europe/Berlin] Stored values - OTP: $2y$10$1REXcHx0yqj2vRXQ0RLOmun4uKc1vRG2UNO77MqaXyFl4aU2dxwhi, Auth Code: GMIECS4VOOPRFDZ6
+[29-Apr-2025 14:56:14 Europe/Berlin] 2FA Verification result: false
+[29-Apr-2025 14:56:14 Europe/Berlin] Verification failed - OTP match: false
+[29-Apr-2025 14:56:14 Europe/Berlin] Request received - Method: POST, Path: verify
+[29-Apr-2025 14:56:14 Europe/Berlin] Endpoint: verify
+[29-Apr-2025 14:56:14 Europe/Berlin] Starting verification process
+[29-Apr-2025 14:56:15 Europe/Berlin] Raw input: {
+    "type": "login",
+    "email": "bienvenugashema@gmail.com",
+    "email_otp": "478023",
+    "auth_code": "205811"
+}
+[29-Apr-2025 14:56:15 Europe/Berlin] Decoded data: Array
+(
+    [type] => login
+    [email] => bienvenugashema@gmail.com
+    [email_otp] => 478023
+    [auth_code] => 205811
+)
+
+[29-Apr-2025 14:56:15 Europe/Berlin] Verification type: login for email: bienvenugashema@gmail.com
+[29-Apr-2025 14:56:15 Europe/Berlin] Stored values - OTP: $2y$10$1REXcHx0yqj2vRXQ0RLOmun4uKc1vRG2UNO77MqaXyFl4aU2dxwhi, Auth Code: GMIECS4VOOPRFDZ6
+[29-Apr-2025 14:56:15 Europe/Berlin] 2FA Verification result: false
+[29-Apr-2025 14:56:15 Europe/Berlin] Verification failed - OTP match: false
+[30-Apr-2025 11:28:07 Europe/Berlin] Request received - Method: POST, Path: register
+[30-Apr-2025 11:28:07 Europe/Berlin] Endpoint: register
+[30-Apr-2025 11:28:07 Europe/Berlin] Processing registration request
+[30-Apr-2025 11:28:13 Europe/Berlin] Registration successful for email: japniyogakiza@gmail.com
+[30-Apr-2025 11:32:51 Europe/Berlin] Request received - Method: POST, Path: verify
+[30-Apr-2025 11:32:51 Europe/Berlin] Endpoint: verify
+[30-Apr-2025 11:32:51 Europe/Berlin] Starting verification process
+[30-Apr-2025 11:32:51 Europe/Berlin] Raw input: {
+    "type": "register",
+    "email": "japniyogakiza@gmail.com",
+    "email_otp": "524593",
+    "auth_code": "291683"
+}
+[30-Apr-2025 11:32:51 Europe/Berlin] Decoded data: Array
+(
+    [type] => register
+    [email] => japniyogakiza@gmail.com
+    [email_otp] => 524593
+    [auth_code] => 291683
+)
+
+[30-Apr-2025 11:32:51 Europe/Berlin] Verification type: register for email: japniyogakiza@gmail.com
+[30-Apr-2025 11:49:39 Europe/Berlin] Request received - Method: GET, Path: register
+[30-Apr-2025 11:49:39 Europe/Berlin] Endpoint: register
+[30-Apr-2025 11:49:39 Europe/Berlin] Processing registration request
+[30-Apr-2025 11:49:47 Europe/Berlin] Request received - Method: GET, Path: register
+[30-Apr-2025 11:49:47 Europe/Berlin] Endpoint: register
+[30-Apr-2025 11:49:47 Europe/Berlin] Processing registration request
+[30-Apr-2025 11:50:54 Europe/Berlin] Request received - Method: GET, Path: register
+[30-Apr-2025 11:50:54 Europe/Berlin] Endpoint: register
+[30-Apr-2025 11:50:54 Europe/Berlin] Processing registration request

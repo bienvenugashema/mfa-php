@@ -64,7 +64,7 @@ function insertUser($n, $em, $p, $h, $eo, $po, $google_code) {
             $mail->Host = 'smtp.gmail.com';
             $mail->Username = 'bienvenugashema@gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Password = "ckgp iujo nveh yuex";
+            $mail->Password = $_ENV['MY_APP_PASSWORD']; // SMTP password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
             $mail->setFrom('bienvenugashema@gmail.com', 'OTP Verification');
@@ -108,69 +108,11 @@ if(isset($_POST['register'])) {
     $secret = $google2fa->generateSecretKey();
 
     if(insertUser($names, $email, $phone, $hashed_password, $email_otp, $phone_otp, $secret)) {
-        header("Location: /mfa-php/auth/otp");
+        header("Location: /mfa-php/auth/otp.php");
         exit();
     }
 }
 
-
-// if(isset($_POST['verify_otp'])) {
-//     
-    // Sanitize inputs
-//     $email2 = $_POST['email'];
-//     $email_otp = sanitizeInput($_POST['email_otp']);
-//     $auth_code = sanitizeInput($_POST['auth_otp']);
-//     // Use prepared statement to prevent SQL injection
-//     $stmt = $conn->prepare("SELECT * FROM waiting_users WHERE email = ?");
-//     $stmt->bind_param("s", $email);
-//     $stmt->execute();
-//     $result = $stmt->get_result();
-    
-//     if($result->num_rows === 1) {
-//         $row = $result->fetch_assoc();
-        
-//         // Verify both OTPs
-//         $emailOtpValid = ($row['email_otp'] === $email_otp);
-//         $authOtpValid = $google2fa->verifyKey($row['auth_code'], $auth_code, 2); // 2*30sec tolerance
-        
-//         if($emailOtpValid && $authOtpValid) {
-//             // Both OTPs are valid - move user to verified users table
-//             $insert = $conn->prepare("INSERT INTO users (names, email, phone, password, is_verified) 
-//                                     VALUES (?, ?, ?, ?, true)");
-//             $insert->bind_param("ssss", $row['names'], $row['email'], $row['phone'], $row['password']);
-//             $insert->execute();
-            
-//             // Remove from waiting list
-//             $delete = $conn->prepare("DELETE FROM waiting_users WHERE email = ?");
-//             $delete->bind_param("s", $email);
-//             $delete->execute();
-            
-//             // Set session variables
-//             $_SESSION['authenticated'] = true;
-//             $_SESSION['user_email'] = $email2;
-            
-//             echo "<script>
-//             alert('Verification successful!');
-//             window.location.href = 'dashboard.php';
-//             </script>";
-//             header("Location: i.php");
-//         } 
-//         elseif(!$emailOtpValid) {
-//             echo "<script>alert('Invalid Email OTP!');</script>";
-//         }
-//         else {
-//             echo "<script>alert('Invalid Authentication Code!');</script>";
-//         }
-//     } else {
-//         echo "<script>alert('User not found!');</script>";
-//     }
-    
-//     // Close statements
-//     $stmt->close();
-//     if(isset($insert)) $insert->close();
-//     if(isset($delete)) $delete->close();
-// }
-// }
 
 if(isset($_POST['login'])) {
     checkGuest(); // Add this line

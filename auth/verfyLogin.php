@@ -173,7 +173,7 @@ if(isset($_SESSION['email_login'])) {
 
         // Initial attempts display
         <?php if(isset($row['trial'])): ?>
-        updateAttemptsDisplay(<?php echo $row['trial']; ?>);
+        updateAttemptsDisplay(<?php echo $row['trials']; ?>);
         <?php endif; ?>
     </script>
     </body>

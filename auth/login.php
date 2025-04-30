@@ -77,8 +77,9 @@ if(isset($_POST['login'])) {
     
     if($result && $result->num_rows === 1) {
         $row = $result->fetch_assoc();
-        
-        if(password_verify($password, $row['password'])) {
+        $v = password_verify($password, $row['password']);
+        echo "trials: " . $v;
+        if($v) {
             // Reset trial counter on new login attempt
             $resetTrials = $conn->prepare("UPDATE users SET trials = 0 WHERE email = ?");
             $resetTrials->bind_param("s", $email);
